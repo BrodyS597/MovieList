@@ -3,6 +3,7 @@
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19454"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -23,6 +24,9 @@
                                     <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <segue destination="kRF-Pe-d3N" kind="show" identifier="showMovie" id="JVU-Oh-d1A"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -31,12 +35,97 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="Movie List" id="AKF-Y7-bKT">
-                        <barButtonItem key="rightBarButtonItem" style="plain" systemItem="add" id="NNB-Fo-9YX"/>
+                        <barButtonItem key="rightBarButtonItem" style="plain" systemItem="add" id="NNB-Fo-9YX">
+                            <connections>
+                                <segue destination="kRF-Pe-d3N" kind="show" id="hkc-zr-RK7"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="BLi-GL-LlL" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="588" y="94"/>
+        </scene>
+        <!--Movie Detail View Controller-->
+        <scene sceneID="v80-rq-iVm">
+            <objects>
+                <viewController id="kRF-Pe-d3N" customClass="MovieDetailViewController" customModule="MovieList" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="y35-gd-evd">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="13" translatesAutoresizingMaskIntoConstraints="NO" id="Yip-B8-93Q">
+                                <rect key="frame" x="20" y="103" width="374" height="179"/>
+                                <subviews>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="movie Name..." textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="z3e-AC-PA1">
+                                        <rect key="frame" x="0.0" y="0.0" width="374" height="34"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Run time..." textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="rGK-IN-dUc">
+                                        <rect key="frame" x="0.0" y="47" width="374" height="34"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Lead Actor..." textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Wh6-Sy-uKn">
+                                        <rect key="frame" x="0.0" y="94" width="374" height="34"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="u3O-TH-nDR">
+                                        <rect key="frame" x="0.0" y="141" width="374" height="38"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mH5-lS-VCJ">
+                                                <rect key="frame" x="0.0" y="0.0" width="184.5" height="38"/>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="filled" title="Clear">
+                                                    <fontDescription key="titleFontDescription" type="system" weight="semibold" pointSize="20"/>
+                                                </buttonConfiguration>
+                                                <connections>
+                                                    <action selector="clearBtnPressed:" destination="kRF-Pe-d3N" eventType="touchUpInside" id="rZz-iz-TE4"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NuT-jT-13c">
+                                                <rect key="frame" x="189.5" y="0.0" width="184.5" height="38"/>
+                                                <color key="backgroundColor" systemColor="systemRedColor"/>
+                                                <color key="tintColor" systemColor="systemRedColor"/>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="filled" title="Delete">
+                                                    <fontDescription key="titleFontDescription" type="system" weight="semibold" pointSize="20"/>
+                                                </buttonConfiguration>
+                                                <connections>
+                                                    <action selector="deleteBtnPressed:" destination="kRF-Pe-d3N" eventType="touchUpInside" id="Ghk-Px-94M"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="GNO-5g-Hiq"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="GNO-5g-Hiq" firstAttribute="trailing" secondItem="Yip-B8-93Q" secondAttribute="trailing" constant="20" id="BwG-22-wvC"/>
+                            <constraint firstItem="Yip-B8-93Q" firstAttribute="top" secondItem="GNO-5g-Hiq" secondAttribute="top" constant="15" id="FzM-kr-lVD"/>
+                            <constraint firstItem="Yip-B8-93Q" firstAttribute="leading" secondItem="GNO-5g-Hiq" secondAttribute="leading" constant="20" id="tyB-PX-0Nm"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="Vfl-7M-M3Z">
+                        <barButtonItem key="rightBarButtonItem" style="plain" systemItem="save" id="zZb-I1-O0S">
+                            <connections>
+                                <action selector="saveBtnPressed:" destination="kRF-Pe-d3N" id="0Jv-Tn-AaN"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="MovieNameTextField" destination="z3e-AC-PA1" id="QJb-XC-JDR"/>
+                        <outlet property="leadActorTextField" destination="Wh6-Sy-uKn" id="zgc-I2-tB3"/>
+                        <outlet property="runTimeTextField" destination="rGK-IN-dUc" id="fZQ-lK-D2l"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Anc-Mi-cxQ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1358" y="94"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="nCK-fL-Ro0">
@@ -55,9 +144,15 @@
             <point key="canvasLocation" x="-301" y="94"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="JVU-Oh-d1A"/>
+    </inferredMetricsTieBreakers>
     <resources>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemRedColor">
+            <color red="1" green="0.23137254901960785" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

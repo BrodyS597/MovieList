@@ -15,6 +15,7 @@
 		6D6CE5062798725D00F40034 /* Movie.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D6CE5052798725D00F40034 /* Movie.swift */; };
 		6D6CE5092798733200F40034 /* Movie Controller.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D6CE5082798733200F40034 /* Movie Controller.swift */; };
 		6D6CE50C27987D0F00F40034 /* MovieListTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D6CE50B27987D0F00F40034 /* MovieListTableViewController.swift */; };
+		6D6CE50E2798899900F40034 /* MovieDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D6CE50D2798899900F40034 /* MovieDetailViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +29,7 @@
 		6D6CE5052798725D00F40034 /* Movie.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Movie.swift; sourceTree = "<group>"; };
 		6D6CE5082798733200F40034 /* Movie Controller.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Movie Controller.swift"; sourceTree = "<group>"; };
 		6D6CE50B27987D0F00F40034 /* MovieListTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieListTableViewController.swift; sourceTree = "<group>"; };
+		6D6CE50D2798899900F40034 /* MovieDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieDetailViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,6 +103,7 @@
 			children = (
 				6D6CE4F527986ED800F40034 /* Main.storyboard */,
 				6D6CE50B27987D0F00F40034 /* MovieListTableViewController.swift */,
+				6D6CE50D2798899900F40034 /* MovieDetailViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -180,6 +183,7 @@
 				6D6CE5092798733200F40034 /* Movie Controller.swift in Sources */,
 				6D6CE4F227986ED800F40034 /* SceneDelegate.swift in Sources */,
 				6D6CE5062798725D00F40034 /* Movie.swift in Sources */,
+				6D6CE50E2798899900F40034 /* MovieDetailViewController.swift in Sources */,
 				6D6CE50C27987D0F00F40034 /* MovieListTableViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
