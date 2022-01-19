@@ -9,21 +9,25 @@
 /* Begin PBXBuildFile section */
 		6D6CE4F027986ED800F40034 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D6CE4EF27986ED800F40034 /* AppDelegate.swift */; };
 		6D6CE4F227986ED800F40034 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D6CE4F127986ED800F40034 /* SceneDelegate.swift */; };
-		6D6CE4F427986ED800F40034 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D6CE4F327986ED800F40034 /* ViewController.swift */; };
 		6D6CE4F727986ED800F40034 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6D6CE4F527986ED800F40034 /* Main.storyboard */; };
 		6D6CE4F927986ED800F40034 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6D6CE4F827986ED800F40034 /* Assets.xcassets */; };
 		6D6CE4FC27986ED800F40034 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6D6CE4FA27986ED800F40034 /* LaunchScreen.storyboard */; };
+		6D6CE5062798725D00F40034 /* Movie.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D6CE5052798725D00F40034 /* Movie.swift */; };
+		6D6CE5092798733200F40034 /* Movie Controller.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D6CE5082798733200F40034 /* Movie Controller.swift */; };
+		6D6CE50C27987D0F00F40034 /* MovieListTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D6CE50B27987D0F00F40034 /* MovieListTableViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		6D6CE4EC27986ED800F40034 /* MovieList.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MovieList.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6D6CE4EF27986ED800F40034 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		6D6CE4F127986ED800F40034 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		6D6CE4F327986ED800F40034 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		6D6CE4F627986ED800F40034 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		6D6CE4F827986ED800F40034 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		6D6CE4FB27986ED800F40034 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		6D6CE4FD27986ED800F40034 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		6D6CE5052798725D00F40034 /* Movie.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Movie.swift; sourceTree = "<group>"; };
+		6D6CE5082798733200F40034 /* Movie Controller.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Movie Controller.swift"; sourceTree = "<group>"; };
+		6D6CE50B27987D0F00F40034 /* MovieListTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieListTableViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,15 +60,49 @@
 		6D6CE4EE27986ED800F40034 /* MovieList */ = {
 			isa = PBXGroup;
 			children = (
+				6D6CE50A27987CC100F40034 /* ViewControllers */,
+				6D6CE5072798731F00F40034 /* Model Controllers */,
+				6D6CE5042798724300F40034 /* Model */,
+				6D6CE5032798712D00F40034 /* Resources */,
+			);
+			path = MovieList;
+			sourceTree = "<group>";
+		};
+		6D6CE5032798712D00F40034 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
 				6D6CE4EF27986ED800F40034 /* AppDelegate.swift */,
 				6D6CE4F127986ED800F40034 /* SceneDelegate.swift */,
-				6D6CE4F327986ED800F40034 /* ViewController.swift */,
-				6D6CE4F527986ED800F40034 /* Main.storyboard */,
 				6D6CE4F827986ED800F40034 /* Assets.xcassets */,
 				6D6CE4FA27986ED800F40034 /* LaunchScreen.storyboard */,
 				6D6CE4FD27986ED800F40034 /* Info.plist */,
 			);
-			path = MovieList;
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		6D6CE5042798724300F40034 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				6D6CE5052798725D00F40034 /* Movie.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		6D6CE5072798731F00F40034 /* Model Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				6D6CE5082798733200F40034 /* Movie Controller.swift */,
+			);
+			path = "Model Controllers";
+			sourceTree = "<group>";
+		};
+		6D6CE50A27987CC100F40034 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				6D6CE4F527986ED800F40034 /* Main.storyboard */,
+				6D6CE50B27987D0F00F40034 /* MovieListTableViewController.swift */,
+			);
+			path = ViewControllers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -138,9 +176,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6D6CE4F427986ED800F40034 /* ViewController.swift in Sources */,
 				6D6CE4F027986ED800F40034 /* AppDelegate.swift in Sources */,
+				6D6CE5092798733200F40034 /* Movie Controller.swift in Sources */,
 				6D6CE4F227986ED800F40034 /* SceneDelegate.swift in Sources */,
+				6D6CE5062798725D00F40034 /* Movie.swift in Sources */,
+				6D6CE50C27987D0F00F40034 /* MovieListTableViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -290,7 +330,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = MovieList/Info.plist;
+				INFOPLIST_FILE = MovieList/Resources/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -317,7 +357,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = MovieList/Info.plist;
+				INFOPLIST_FILE = MovieList/Resources/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
